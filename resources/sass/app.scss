@@ -1,0 +1,36 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Home Page
+@import "home";
+
+// Profile
+@import "profile";
+
+// Articles
+@import "articles";
+
+/*<--------------->*/
+    /*Components*/
+/*<--------------->*/
+
+// Text Editor
+@import "components/text_editor";
+
+// Article Card
+@import "components/article_card";
+
+// DropButton
+@import "components/dropbutton";
+
+/*<--------------->*/
+    /*FORMULARY*/
+/*<--------------->*/
+
+@import "formulary";

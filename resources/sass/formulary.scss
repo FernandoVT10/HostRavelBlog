@@ -1,0 +1,78 @@
+.formulary {
+    background: white;
+    padding: 40px 20px;
+
+    & .title {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.7em;
+        color: $primary;
+        margin-bottom: 30px;
+    }
+
+    & .formulary-group {
+        margin-top: 20px;
+
+        & label {
+            text-transform: uppercase;
+            font-weight: bold;
+            color: $gray;
+        }
+    
+        & input,
+        & textarea {
+            outline: 0;
+            display: block;
+            width: 100%;
+            border: solid 2px $gray-light;
+            padding: 10px;
+            background: white;
+            border-radius: 2px;
+            transition: .3s;
+
+            &.is-invalid {
+                border: solid 1px $danger;
+                box-shadow: inset $danger 0 0 5px 0px;
+            }
+        }
+    }
+
+    & .formulary-check {
+        margin-top: 20px;
+
+        & label {
+            text-transform: uppercase;
+            font-weight: bold;
+            color: $gray;
+        }
+    }
+
+    & select {
+        outline: 0;
+        position: relative;
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background: white;
+        text-transform: uppercase;
+    }
+
+    & .formulary-button {
+        margin-top: 20px;
+        width: 100%;
+        padding: 15px;
+        color: white;
+        border: none;
+        font-weight: bold;
+        border-radius: 5px;
+        background: $indigo;
+        transition: all 0.3s ease 0s;
+
+        &:hover {
+            background: white;
+            color: black;
+            transform: scale(1.05);
+            box-shadow: 0px 5px 40px -5px $indigo;
+        }
+    }
+}

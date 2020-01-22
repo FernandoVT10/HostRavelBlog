@@ -1,0 +1,108 @@
+.dropbutton {
+    position: relative;
+    width: 50px;
+    height: 50px;
+
+    &:hover .dropbutton-menu {
+        display: flex;
+        animation: fadeInRight 0.5s forwards;
+    }
+
+    /*<--------------->*/
+        /*PLACEMENTS*/
+    /*<--------------->*/
+
+    &.dropleft {
+        & .dropbutton-menu {
+            left: 50%;
+            transform: translateX(-100%);
+            padding: 0;
+            padding-right: 35%;
+            padding-left: 10%;
+        }
+
+        &:hover .dropbutton-menu {
+            display: flex;
+            animation: fadeInLeft 0.5s forwards;
+        }
+    }
+
+    /*<--------------->*/
+        /*COLORS*/
+    /*<--------------->*/
+
+    &.dropbutton-primary {
+        & .toggle {
+            background-color: $primary;
+
+            &:hover {
+                background: darken($color: $primary, $amount: 10);
+            }
+        }
+
+        & .dropbutton-menu {
+            background-color: $primary;
+        }
+    }
+
+    & .toggle {
+        position: relative;
+        z-index: 1;
+        outline: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: none;
+        color: white;
+        background: $dark;
+        transition: .3s;
+
+        &:hover {
+            color: darken($color: white, $amount: 10);
+            background: darken($color: $dark, $amount: 10);
+        }
+    }
+
+    & .dropbutton-menu {
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        display: none;
+        align-items: center;
+        padding-left: 35%;
+        padding-right: 10%;
+        border-radius: 40px;
+        height: 90%;
+        background-color: $dark;
+        overflow: hidden;
+        transition: 1s;
+
+        & .dropbutton-item {
+            font-size: 80%;
+            padding: 0 10px;
+            color: white;
+        }
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(calc(-100% + 30px));
+    }
+    100% {
+        transform: translateX(-100%);
+        opacity: 1;
+    }
+}

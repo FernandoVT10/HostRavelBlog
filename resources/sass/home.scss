@@ -1,0 +1,25 @@
+.home-main-article {
+    & .image {
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+    }
+    & .description {
+        line-height: 2;
+    }
+
+    & .link {
+        color: $blue;
+        font-size: 20px;
+        text-decoration: none;
+        border: none;
+        border-top: solid 2px $blue;
+        border-bottom: solid 2px $blue;
+        border-color: transparent;
+        transition: .3s;
+
+        &:hover {
+            border-color: $blue;
+        }
+    }
+}
